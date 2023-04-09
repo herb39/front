@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&display=swap');
+
+body {
+  font-family: 'Alkatra', cursive;
+  background-image: url("DPL_images/bgi.jpg");
+}
+
+h1 {
+  text-align: center;
+  font-style: oblique;
+  font-size: 50px;
+}
+
+td,
+a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+#welcome {
+  text-shadow: -6px -4px aliceblue;
+  line-height: 300px;
+  font-family: 'Alkatra', cursive;
+  font-size: 100px;
+  font-weight: 100;
+  letter-spacing: 4px;
+  text-align: center;
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+#menu {
+  margin: -8px -8px;
+  padding: 1px;
+  background-image: url("DPL_images/bgi.jpg");
+
+}
+
+td a:hover {
+  color: aquamarine;
+  transition: color 0.3s ease;
+}
+
+summary {
+  font-size: 60px;
+  text-align: center;
+}
+
+summary:hover {
+  color: aliceblue;
+  transition: color 0.5s ease;
+  cursor: pointer;
+}
+
+.sl {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.sl:hover {
+  text-align: center;
+  color: #f35626;
+  background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 2s infinite linear;
+}
+
+
+
+form {
+  width: 250px;
+  margin: 0 auto;
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+input[type="reset"] {
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #2980b9;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 250px;
+}
+
+input[type="submit"]:hover {
+  background-color: #3498db;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
