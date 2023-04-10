@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@600&display=swap');
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+body {
+  margin: 0;
+  height: 2000px;
+  color: aliceblue;
+  
+  font-family: 'Alkatra';
+  background-image: url(../0407_homework/DPL_images/bgi.jpg);
+}
