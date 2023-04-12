@@ -13,29 +13,41 @@
   <script>
     'use strict';
 
-    // 구구단 메서드
     function gugudan() {
-      let dan = document.getElementById("dan").value.trim();
-      if (dan == "") {
+      let danStart = document.getElementById("danStart").value.trim();
+      let danEnd = document.getElementById("danEnd").value.trim();
+      let danCnt = document.getElementById("danCnt").value.trim();
+      let cnt = 0;
+      let str = '', res;
+      let start = Math.min(danStart, danEnd);
+      let end = Math.min(danStart, danEnd);
+
+      if (danStart == "" || danEnd == "" || danCnt == "") {
         alert("단을 입력하세요.")
         return false;
       }
-      let str = '', res;
-      for (let i = 1; i < 10; i++) {
-        res = dan + " * " + i + " = " + (dan * i) + "<br>";
-        str += res;
+
+      str = '<table class="table">'
+      for (let i = start; i <= end; i++) {
+        str += '<th>' + i + '단</th><tr><td>';
+        for (let j = 1; j <= 9; j++) {
+          res = i + " * " + j + " = " + (i * j) + "<br>";
+          str += res;
+        }
+        cnt++;
+        if (cnt % danCnt == 0) {
+          str += '</td></tr>'
+        }
       }
+      str += "</table>";
       demo.innerHTML += "<b>" + str + "</b>";
     }
 
-    // 화면 초기화
     function cleanCheck() {
-      // 값 유지
-      document.getElementById("dan").value = 1;
+      document.getElementById("danStart").value = 1;
+      document.getElementById("danEnd").value = 1;
+      document.getElementById("danCnt").value = 1;
       demo.innerText = '';
-
-      // 새로고침
-      // location.reload();
     }
   </script>
 </head>
@@ -50,9 +62,11 @@
       2. 출력되는 단은 가로방향으로 출력 (한 행에 출력할 횟수 입력)
     </div>
     <p>
-      단 : <input type="number" name="dan" id="dan" value="1" autofocus />
-      <input type="button" value="for문연습" onclick="gugudan()" class="btn btn-success"/>
-      <input type="button" value="다시입력" onclick="cleanCheck()" class="btn btn-warning"/>
+      시작 단 : <input type="number" name="dan" id="danStart" value="2" autofocus />
+      끝 단 : <input type="number" name="dan" id="danEnd" value="9" autofocus />
+      출력 횟수 : <input type="number" name="dan" id="danCnt" value="3" autofocus />
+      <input type="button" value="for문 연습" onclick="gugudan()" class="btn btn-success" />
+      <input type="button" value="다시 입력" onclick="cleanCheck()" class="btn btn-warning" />
     </p>
     <hr />
     <div id="demo"></div>

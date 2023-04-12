@@ -42,7 +42,7 @@ git config --global user.name 'Happy_Cheon'
 git config --global user.email 'cjsk1126@hanmail.net'
 
 
--(2)- 작업폴더 만든후 vs code에서 작업폴더를 연결한다.(작업폴더를 test로 만들었다면, vs code에서 작업폴더를 연결후 터미널에서 git bash로 연결해서 아래명령을 차례로 수행한다.
+-(2)- 작업폴더 만든후 vs code에서 작업폴더를 연결한다.(작업폴더를 test로 만들었다면, vs code에서 작업폴더를 연결후 터미널에서 git bash로 연결해서 아래명령을 차례로 수행한다.)
 
 git init
 
