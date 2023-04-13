@@ -20,7 +20,7 @@
       let cnt = 0;
       let str = '', res;
       let start = Math.min(danStart, danEnd);
-      let end = Math.min(danStart, danEnd);
+      let end = Math.max(danStart, danEnd);
 
       if (danStart == "" || danEnd == "" || danCnt == "") {
         alert("단을 입력하세요.")
@@ -36,7 +36,7 @@
         }
         cnt++;
         if (cnt % danCnt == 0) {
-          str += '</td></tr>'
+          str += '</td></tr>';
         }
       }
       str += "</table>";
