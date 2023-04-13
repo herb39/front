@@ -11,6 +11,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@600&display=swap" rel="stylesheet">
 </head>
+<script>
+  'use strict';
+
+  function join() {
+    let url = "join.html";
+    let winName = "winName";
+    let winWidth = 600;
+    let winHeight = 400;
+    let x = (screen.width / 2) - (winWidth / 2);
+    let y = (screen.height / 2) - (winHeight / 2);
+    let opt = "width=" + winWidth + ",height=" + winHeight + ",left=" + x + ",top=" + y;
+
+    window.open(url, winName, opt);
+  }
+
+</script>
 
 <body>
   <div id="menu">
@@ -30,19 +46,22 @@
   <div id="welcome">
     Welcome to DPL
   </div>
-  <iframe width="0" height="0" src="https://www.youtube.com/embed/ywwU5ka1fBs?autoplay=1" title="YouTube video player"
+  <!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/ywwU5ka1fBs?autoplay=1" title="YouTube video player"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen></iframe>
+    allowfullscreen></iframe> -->
   <form>
     <div class="form-group">
-      <input type="text" id="username" name="username" placeholder="아이디를 입력하세요.">
+      <input type="text" id="username" name="username" placeholder="아이디를 입력하세요." autofocus>
     </div>
     <div class="form-group">
       <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요.">
     </div>
     <div class="form-group">
       <input type="submit" value="로그인">
+    </div>
+    <div class="form-group">
+      <input type="button" value="회원가입" onclick="join()">
     </div>
   </form>
 </body>

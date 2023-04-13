@@ -27,20 +27,19 @@
         return false;
       }
 
-      str = '<table class="table">'
+      str = '<table class="table"><tr>'
       for (let i = start; i <= end; i++) {
-        str += '<th>' + i + '단</th><tr><td>';
+        str += '<th style="text-align:center">' + i + '단</th><td "text-align:center">';
         for (let j = 1; j <= 9; j++) {
-          res = i + " * " + j + " = " + (i * j) + "<br>";
+          res = i + " * " + j + " = " + (i * j) + "<br/>";
           str += res;
         }
         cnt++;
-        if (cnt % danCnt == 0) {
-          str += '</td></tr>';
-        }
+        str += '</td>';
+        if (cnt % danCnt == 0) str += '</tr>';
       }
       str += "</table>";
-      demo.innerHTML += "<b>" + str + "</b>";
+      demo.innerHTML += str;
     }
 
     function cleanCheck() {
