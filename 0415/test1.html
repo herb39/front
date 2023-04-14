@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test1.html</title>
+  <script>
+    'use strict';
+
+    // 1. 논리값 JSON 이용 String포맷으로 변환
+    let json = JSON.stringify(true);
+    console.log(json);
+    console.clear();
+
+    // 2. 배열값 JSON 이용 String포맷으로 변환
+    json = JSON.stringify(['apple', 'banana']);
+    console.log(json);
+
+    // 자바스크립트에서의 객체 생성
+    const Member = {
+      name: '홍길동',
+      age: 25,
+      color: 'white',
+      birthday: new Date(),
+      size: null,
+      gender: true,
+      atom: () => {
+        console.log("성명 : ", Member.name);
+      }
+    }
+    console.log("name : " + Member.name);
+    console.log("birthday : " + Member.birthday);
+    console.log("birthday : " + Member.birthday.getDate() + "일");
+    console.log("atom함수 호출 : " + Member.atom());
+    console.log();
+
+    // 3-1. object를 json포맷으로 변환
+    json = JSON.stringify(Member);
+    console.log(json);
+    console.log();
+
+    // 3-2. 앞의 정의된 object의 필요한 속성(key)만을 목록(배열)으로 만들어서 받을 수 있음
+    json = JSON.stringify(Member, ['name', 'age', 'gender']);
+    console.log(json);
+    console.log();
+
+    // 3-3. 앞의 정의된 object의 필요한 속성(key)만을 가져올 때 key값을 모르면 ?
+    json = JSON.stringify(Member, (key, value) => {
+      console.log(`key: ${key}, value: ${value}`);
+      return key == 'name' ? '홍길순' : value;
+    });
+    console.log(json);
+    console.log();
+
+
+    // 4. JSON형식의 자료를 Object형식으로 변환 : 파싱(parsing)
+    let obj = JSON.parse(json);
+    console.log(obj);
+    console.log();
+
+    console.log(obj.name);
+    console.log(obj.age);
+    console.log(obj.color);
+    console.log(obj.birthday);
+    // console.log(obj.birthday.getDate());
+    console.log();
+
+    const obj2 = JSON.parse(json, (key, value) => {
+      return key == 'birthday' ? new Date(value) : value;
+    });
+    console.log(obj2);
+    console.log(obj2.birthday.getDate() + "일");
+  </script>
+</head>
+
+<body>
+  <h2>웹을 통한 값의 전달방식</h2>
+  <pre>
+    웹과 서버의 통신방식은 HTTP를 사용
+    HTTP : Hyper Text Transfer Protocol, Server와 Client 사이의 값들은 전송해주는 통신을 정의한 프로토콜
+      클라이언트가 서버에 요청(request)할 수 있고, 서버는 클라이언트에게 응답(response)한다.
+
+      서버와 클라이언트의 자료 전달방식 : XML, JSON
+
+      AJAX : Asynchronous Javascript And XML - 비동기 통신
+      XML : HTML과 같은 마크업 언어, 초창기에 주로 사용했던 서버와 데이터를 주고받는 기술
+        동기식 된 자료를 전송함 / 불필요한 태그가 많아 가독성이 떨어짐(->요즘에 잘 안씀)
+      JSON : JavaScript Object Notation 서버와 필요한 데이터를 전송하는 포맷
+        모바일에서의 서버와 데이터 전송방식에서 주로 사용되어 옴
+        프로그램의 종류나 플랫폼에 관계 없이 사용할 수 있게 됨(Java, C, C++, Python, PHP, kotlin)
+        자바스크립트에서는 객체와 같이 "키(key)":"값(value)" 으로 구성되어 있음
+        처리방식 : Object를 String으로 직렬화(serialize) 처리해서 다시 Object로 변환해서 사용
+  </pre>
+</body>
+
+</html>

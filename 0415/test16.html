@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test16.html</title>
+  <script>
+    'use strict';
+
+    // 배열 선언 : new Array();
+    const fruits = ['사과', '배', '바나나', '딸기', '포도'];
+    
+    // 배열 요소 추가 : unshift(앞에 추가) / pusu(뒤에 추가)
+    fruits.push("수박");
+    console.log(fruits);
+    console.log();
+
+    fruits.push("당근","토마토","앵두");
+    console.log(fruits);
+    console.log();
+    
+    fruits.unshift("당근2","토마토2","앵두2");
+    console.log(fruits);
+
+    // 배열 요소 삭제 : pop() / shift()
+    fruits.pop();
+    fruits.pop();
+    console.log(fruits);
+    console.log();
+
+    fruits.shift();
+    fruits.shift();
+    console.log(fruits);
+    console.log();
+
+    // 특정 요소 삭제 : splice(인덱스번호, 요소개수)
+    fruits.splice(2, 1);
+    console.log(fruits);
+    console.log();
+
+    // 특정 요소 삭제 후 추가 : splice(인덱스번호, 요소개수, 추가항목)
+    fruits.splice(2, 1, '자몽','옥수수');
+    console.log(fruits);
+    console.log();
+    
+    // 특정 요소를 특정 위치에 추가 : splice(인덱스번호, 요소개수, 추가항목)
+    fruits.splice(4, 0, '파인애플','체리');
+    console.log(fruits);
+    console.log();
+
+    // 특정 요소 자료 추출 : slice(인덱스번호)
+    let item = fruits.slice(2);     // 인덱스 2번부터 끝까지 추출
+    console.log(item);
+    console.log();
+
+    // 특정 요소 자료 추출 : slice(인덱스번호)
+    item = fruits.slice(2, 5);     // 인덱스 2번부터 5번 앞까지 추출
+    console.log(item);
+    console.log();
+
+    // 배열 내 요소 검색 : indexOf() : 있으면 위치값 / 없으면 -1 반환
+    // lastIndexOf() : 뒤에서
+    console.log(fruits.indexOf("옥수수"));
+    console.log(fruits.indexOf("옥수수다"));
+    console.log();
+
+    console.log(fruits);
+    console.log(fruits.lastIndexOf("딸기"));
+    console.log();
+
+    let res = fruits.filter((truit, index) => index % 2 == 0);
+    console.log(res);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <h2>배열 연습</h2>
+  <hr />
+  <div id="demo"></div>
+</body>
+
+</html>
