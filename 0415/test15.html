@@ -19,13 +19,13 @@
     document.write("3. " + fruits[0] + "<br />");
     document.write("4. " + [fruits.length - 1] + "<br /><br />");
 
-    // 향상된 for문 - 값 추출
+    // 향상된 for문 - of 값 추출
     for (let fruit of fruits) {
       document.write(fruit + " / ");
     }
     document.write("<br />");
 
-    // 향상된 for문 - 인덱스 번호 추출
+    // 향상된 for문 - in 인덱스 번호 추출
     for (let fruit in fruits) {
       document.write(fruit + " / ");
     }
@@ -49,13 +49,13 @@
     });
     document.write("<br />");
     document.write("<br />");
-    
+
     // 향상된 for문(forEach)
     fruits.forEach(function (fruit, index, array) {
       document.write((index + 1) + ". " + fruit + " // " + array + "<br />")
     });
     document.write("<br />");
-    
+
     // Arrow Function
     fruits.forEach((fruit, index) => {
       document.write(index + " : " + fruit + "<br />");

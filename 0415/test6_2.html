@@ -18,14 +18,14 @@
     function plus() {
       clearTimeout(statusTime);
       num++;
-      statusTime = setTimeout(plus, 100);
+      statusTime = setTimeout(plus, 1000);
       demo.innerHTML = num;
     }
 
     function minus() {
       clearTimeout(statusTime);
       num--;
-      statusTime = setTimeout(minus, 100);
+      statusTime = setTimeout(minus, 1000);
       demo.innerHTML = num;
     }
 
