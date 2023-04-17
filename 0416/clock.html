@@ -9,33 +9,38 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   </head>
 <body>
-  <section>
+  <section id="section">
     <div class="container">
-      <div class="icons">
+      <div class="icons" id="icons">
+        <!-- 달 / 해 아이콘 -->
         <i class="fas fa-moon"></i>
         <i class="fas fa-sun"></i>
       </div>
       <div class="time">
         <div class="time-colon">
           <div class="time-text">
-            <span class="num hour_num">00</span>
+            <!-- 시 -->
+            <span class="num hour_num" id="hour_num">00</span>
             <span class="text">Hours</span>
           </div>
           <span class="colon">:</span>
         </div>
         <div class="time-colon">
           <div class="time-text">
-            <span class="num min_num">00</span>
+            <!-- 분 -->
+            <span class="num min_num" id="min_num">00</span>
             <span class="text">Minutes</span>
           </div>
           <span class="colon">:</span>
         </div>
         <div class="time-colon">
           <div class="time-text">
-            <span class="num sec_num">00</span>
+            <!-- 초 -->
+            <span class="num sec_num" id="sec_num">00</span>
             <span class="text">Seconds</span>
           </div>
-          <span class="am_pm">AM</span>
+          <!-- AM / PM -->
+          <span class="am_pm" id="am_pm">AM</span>
         </div>
       </div>
     </div>

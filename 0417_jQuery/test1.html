@@ -26,8 +26,8 @@
         let su = suVar.value;
         if (isNaN(price) || isNaN(su)) {
           alert("숫자만 입력하세요.")
-          priceVar.select();
-          priceVar.focus();
+          priceVar.select();      // ctrl + a 선택
+          priceVar.focus();     // 커서 이동
           return false;
         }
         let res = price * su;

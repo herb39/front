@@ -14,17 +14,7 @@
   <script>
     'use strict';
 
-    $(function () {
-      $(".container div").css('color', '#DDD')
-        // .filter(function () { });
-        .filter((index, item) => {
-          return index % 2 == 0;
-        }).css('color', 'orange')
-        .filter('.test2').css('fontSize', '25px')
-        .filter(function (index, item) {
-          return $(item).is('.kbs');
-        }).css('color', 'red')
-    });
+    $(function () {$(".container div").css('color', '#DDD').filter((index, item) => {return index % 2 == 0;}).css('color', 'orange').filter('.test2').css('fontSize', '25px').filter(function (index, item) {return $(item).is('.kbs');}).css('color', 'red')});
 
     // not
     $('.containcer div').css('color', '#DDD')
