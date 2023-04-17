@@ -64,10 +64,10 @@ section.dark .container .icons i {
   pointer-events: none;
 }
 
-section.dark .container .icons i.fa_sun {
+section.dark .container .icons i.fa-sun {
   opacity: 1;
   pointer-events: auto;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 section .container .time {
